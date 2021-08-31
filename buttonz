@@ -1,0 +1,6 @@
+local closegui = script.Parent.CloseGUI local controls = script.Parent.Parent.Screens.Controls.Frame local gamescripts = script.Parent.Parent.Screens.GameScripts.Frame local main = script.Parent.Parent.Screens.Main.Frame local miscscripts = script.Parent.Parent.Screens.MiscScripts.Frame local close = script.Parent.CloseGUI local con = script.Parent.Controls local gamesc = script.Parent.GameScripts local mainb = script.Parent.Main local misc = script.Parent.MiscScripts
+close.MouseButton1Click:Connect(function() script.Parent.Parent:Destroy() end)
+con.MouseButton1Click:Connect(function() main.Visible = false gamescripts.Visible = false controls.Visible = true miscscripts.Visible = false end)
+gamesc.MouseButton1Click:Connect(function() main.Visible = false gamescripts.Visible = true controls.Visible = false miscscripts.Visible = false end)
+mainb.MouseButton1Click:Connect(function() main.Visible = true gamescripts.Visible = false controls.Visible = false miscscripts.Visible = false end)
+misc.MouseButton1Click:Connect(function() main.Visible = false gamescripts.Visible = false controls.Visible = false miscscripts.Visible = true end)
